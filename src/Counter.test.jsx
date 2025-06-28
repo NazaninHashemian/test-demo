@@ -3,8 +3,6 @@ import Counter from "./Counter";
 
 test("initial counter is 0", () => {
     render(<Counter />);
-    //   const countElement = screen.getByText("Count: 0");
-    // const countElement = screen.getByText((content) => content.includes("0"));
     const countElement = screen.getByText("Current count: 0");
     expect(countElement).toBeInTheDocument();
   });
@@ -13,8 +11,6 @@ test("initial counter is 0", () => {
     render(<Counter />);
     const button = screen.getByText("Increase");
     fireEvent.click(button);
-    //   const countElement = screen.getByText("Count: 1");
-    // const countElement = screen.getByText((content) => content.includes("1"));
     const countElement = screen.getByText("Current count: 1");
     expect(countElement).toBeInTheDocument();
   });
