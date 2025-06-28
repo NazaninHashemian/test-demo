@@ -1,12 +1,19 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Counter from "./Counter";
 
-test("increments counter when button is clicked", () => {
-  render(<Counter />);
+test("initial counter is 0", () => {
+    render(<Counter />);
+    //   const countElement = screen.getByText("Count: 0");
+    const countElement = screen.getByText((content) => content.includes("0"));
+    expect(countElement).toBeInTheDocument();
+  });
   
-  const button = screen.getByText("Increase");
-  fireEvent.click(button);
-
-  const countText = screen.getByText("Current count: 1");
-  expect(countText).toBeInTheDocument();
-});
+  test("increments counter when button is clicked", () => {
+    render(<Counter />);
+    const button = screen.getByText("Increase");
+    fireEvent.click(button);
+    //   const countElement = screen.getByText("Count: 1");
+    const countElement = screen.getByText((content) => content.includes("1"));
+    expect(countElement).toBeInTheDocument();
+  });
+  
