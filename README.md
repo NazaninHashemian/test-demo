@@ -6,8 +6,11 @@ This is a simple React application demonstrating basic component functionality a
 
 - Simple counter component with increment and decrement buttons  
 - Prevents counter from going below zero  
-- Interactive UI updates on button clicks  
+- NameForm component for entering and submitting a name  
+- Displays a greeting and clears input after submission  
+- Interactive UI updates on button clicks and form submission  
 - Unit tests covering rendering, user interactions, and edge cases  
+
 
 ## Getting Started
 
@@ -47,12 +50,20 @@ npm test
 
 The tests cover:
 
-- Rendering of components and initial state validation  
-- Increment and decrement button functionality  
-- Boundary condition ensuring counter does not go below zero  
-- Multiple click scenarios and state updates  
+Rendering of components and initial state validation
 
-Explore the test files in the `src` folder (e.g., `Counter.test.jsx`) to see detailed test cases.
+Increment and decrement button functionality
+
+Boundary condition ensuring counter does not go below zero
+
+Controlled input for name form
+
+Form submission and greeting display
+
+Input clearing after submit
+
+
+Explore the test files in the `src` folder (e.g., `Counter.test.jsx` , `NameForm.test.jsx`) to see detailed test cases.
 
 ## Technologies Used
 
